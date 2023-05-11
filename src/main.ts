@@ -5,8 +5,14 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.setGlobalPrefix('api/');
-  app.enableCors();
-  const config = new DocumentBuilder()
+  app.enableCors({
+    origin: [
+      'https://gable-front.vercel.app/'
+    ],
+    methods: ["GET", "POST", "PATCH", "DELETE"],
+    credentials: true,
+  });
+  const config = new DocumentBuilder()zx
     .setTitle('Gable')
     .setDescription('API Gable Project Configurateur pc')
     .setVersion('1.0')
