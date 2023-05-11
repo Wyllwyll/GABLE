@@ -7,7 +7,7 @@ async function bootstrap() {
   app.setGlobalPrefix('api/');
   app.enableCors({
     origin: [
-      'https://gable-front.vercel.app/'
+      'https://gable-front.vercel.app'
     ],
     methods: ["GET", "POST", "PATCH", "DELETE"],
     credentials: true,
