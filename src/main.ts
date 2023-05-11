@@ -12,7 +12,7 @@ async function bootstrap() {
     methods: ["GET", "POST", "PATCH", "DELETE"],
     credentials: true,
   });
-  const config = new DocumentBuilder()zx
+  const config = new DocumentBuilder()
     .setTitle('Gable')
     .setDescription('API Gable Project Configurateur pc')
     .setVersion('1.0')
